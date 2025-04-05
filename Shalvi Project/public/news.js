@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loader.classList.add("loader");
     newsContainer.appendChild(loader);
 
-    fetch("http://localhost:5500/news") // Fetch news from backend
+    fetch("https://my-projects-6fcq.onrender.com/news") // Fetch news from backend
         .then(response => response.json())
         .then(data => {
             loader.remove(); // Remove loader after fetching
