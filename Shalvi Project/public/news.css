@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: pink;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+/* Logo */
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.nav-logo p.fullForm {
+    font-size: small;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    filter: drop-shadow(0 0 5px #fff);
+    transition: all 0.5s;
+}
+
+.nav-links a:hover {
+    transform: translate(-2px, 3px);
+    text-shadow: 5px 0 1px #fff, 5px 0 1px #fff;
+}
+
+.homePageHeading {
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 15px;
+    word-spacing: 10px;
+    border-bottom: solid 2px #000;
+    padding: 30px;
+    margin-top: 130px;
+    color: black;
+    transition: all 0.5s;
+}
+
+/* News Container */
+main {
+    margin: 70px 0 20px 0;
+    /* To prevent content from overlapping with navbar */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* News Card */
+.news-card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 310px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.news-card:hover {
+    transform: scale(1.01);
+}
+
+/* Read More Button */
+.news-card a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: rgb(216, 50, 78);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+.news-card a:hover {
+    background: rgb(255, 100, 150);
+    letter-spacing: 10px;
+    word-spacing: 5px;
+}
+
+/* Loader Styles */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid pink;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Breaking News Banner */
+.breaking-news {
+    background: rgb(211, 45, 72);
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 150px;
+    width: 100%;
+}
+
+.breaking-label {
+    box-shadow: inset 5px 5px 10px pink, inset -2px -2px 5px pink;
+    color: yellow;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    width: 100%;
+    background: rgb(253, 76, 106);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: pink;
+}
+
+#filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.filter-button {
+    padding: 8px 15px;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-button.active {
+    background-color: pink;
+    color: white;
+    font-weight: bold;
+}
+
+.news-category {
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+
+    /* Heading: Reduce size */
+    .homePageHeading {
+        font-size: 2.5rem;
+        letter-spacing: 8px;
+        word-spacing: 5px;
+        text-align: center;
+    }
+
+    /* News Cards: Adjust layout */
+    main {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .news-card {
+        width: 280px; /* Slightly smaller to fit better */
+    }
+
+    .news-card:hover {
+        transform: scale(1);
+    }
+
+    /* Breaking News: Adjust for better fit */
+    .breaking-news {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .news-card a:hover {
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+}
+
+@media (max-width: 902px) {
+    /* Arrange news cards in two per row */
+    main {
+        display: grid;
+        justify-content: center;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        gap: 10px; /* Maintain spacing */
+    }
+
+    .news-card {
+        margin: 10px;
+        width: 400px; /* Prevent excessive stretching */
+        height: 500px;
+    }
+
+    .news-card:hover {
+        transform: scale(1);
+    }
+
+    .news-card a:hover {
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+}
+
+@media (max-width: 878px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Three equal columns */
+        gap: 10px;
+    }
+
+    .news-card {
+        width: 90%; /* Reduce card width */
+        max-width: 350px; /* Prevent excessive stretching */
+        height: fit-content; /* Allow flexible height */
+        font-size: 0.75rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-card .news-content {
+        flex-grow: 1; /* Keeps content balanced */
+    }
+
+    .news-card a {
+        margin-top: 20px; /* Ensures button is at the bottom */
+    }
+}
+
+
+@media (max-width: 718px) {
+    /* Reduce title size */
+    .homePageHeading {
+        font-size: 2rem; /* Smaller but still noticeable */
+        letter-spacing: 8px;
+        word-spacing: 5px;
+        padding: 20px;
+    }
+
+    /* Make news cards full width */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-card {
+        width: 95%; /* Wider for better readability */
+        max-width: 500px; /* Prevent excessive stretching */
+        height: fit-content;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-card a {
+        margin-top: 20px; /* Keeps "Read More" at bottom */
+    }
+}
+
+/* Hamburger menu initially hidden */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+/* Navigation menu (hidden by default) */
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: pink;
+    border: 3px solid #000;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+/* .nav-menu a:hover {
+    background: rgb(255, 100, 150);
+    color: white;
+} */
+
+/* --- Responsive Design --- */
+@media (max-width: 620px) {
+    /* Show hamburger, hide default nav links */
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Make the title smaller */
+    .homePageHeading {
+        font-size: 1.8rem;
+        letter-spacing: 5px;
+        word-spacing: 2px;
+        padding: 15px;
+    }
+
+    /* Make news cards smaller */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-card {
+        width: 90%;
+        max-width: 400px;
+        height: 350px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .news-card a {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 486px) {
+    /* Make the title even smaller */
+    .homePageHeading {
+        font-size: 1.2rem; /* Very small title */
+        letter-spacing: 2px;
+        word-spacing: 1px;
+        padding: 10px;
+    }
+
+    /* Reduce font size in news cards */
+    .news-card {
+        font-size: 0.8rem; /* Shrink text */
+        padding: 8px;
+        width: 95%; /* Ensure it fits well */
+        max-width: 300px;
+        height: fit-content;
+    }
+
+    .news-card a {
+        margin-top: 20px;
+        font-size: 0.7rem;
+        padding: 6px;
+    }
+}
+
+/* Default Styles (For Normal Screens) */
+.news-card {
+    width: 300px; 
+    min-height: 450px;
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.homePageHeading {
+    font-size: 2rem;
+}
+
+nav .nav-links a {
+    font-size: 1.2rem;
+}
+
+/* For 1920px+ Screens */
+@media (min-width: 1920px) {
+    main {
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    }
+
+    .news-card {
+        width: 450px;
+        min-height: 600px;
+        font-size: 1.3rem;
+        padding: 25px;
+    }
+
+    .homePageHeading {
+        font-size: 3rem;
+    }
+
+    nav .nav-links a {
+        font-size: 1.6rem;
+    }
+}
+
+/* For 2560px+ Screens (Ultra-Wide) */
+@media (min-width: 2560px) {
+    main {
+        grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    }
+
+    .news-card {
+        width: 500px;
+        min-height: 650px;
+        font-size: 1.4rem;
+        padding: 30px;
+    }
+
+    .homePageHeading {
+        font-size: 3.5rem;
+    }
+
+    nav .nav-links a {
+        font-size: 1.8rem;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .homePageHeading {
+        font-size: 1.5rem; /* Reduce the size */
+        text-align: center; /* Center align */
+    }
+}
+
+@media (max-width: 348px) {
+    .homePageHeading {
+        font-size: 1rem; /* Reduce the size */
+        text-align: center; /* Center align */
+    }
+}

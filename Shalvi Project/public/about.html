@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - La Neuisere</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-logo">La Neuisere</div>
+        
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+            <a href="/news.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-container">
+        <h1 class="about-title">About La Neuisere</h1>
+        
+        <div class="about-grid">
+            <div class="about-card">
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide fast, accurate, and unbiased news to our audience. We believe in journalism that informs, educates, and empowers people.</p>
+            </div>
+
+            <div class="about-card">
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>⚡ <strong>Real-time news updates</strong> – Stay ahead with the latest breaking news.</li>
+                    <li>📰 <strong>Unbiased journalism</strong> – We deliver news without any hidden agendas.</li>
+                    <li>🌎 <strong>Global & Local Coverage</strong> – Whether it’s world events or local stories, we’ve got it all covered.</li>
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <h2>Stay Connected</h2>
+                <p>Follow us on social media and subscribe to our newsletter to never miss an update!</p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h2>Our Values</h2>
+                <p>We uphold integrity, transparency, and accuracy in journalism. We are dedicated to ethical reporting that benefits our readers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 La Neuisere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
